@@ -41,8 +41,8 @@ main()
 
         bzero(msg,sizeof(msg));
     
-        // recvid = recvfrom(sockid, msg, sizeof(msg), 0, (struct sockaddr*)&servaddr, &clientlen);
-        // printf("%s \n", msg);
+        recvid = recvfrom(sockid, msg, sizeof(msg), 0, (struct sockaddr*)&servaddr, &clientlen);
+        printf("%s \n", msg);
 
         if(strncmp("bye",msg,3)==0)
          {

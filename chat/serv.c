@@ -48,8 +48,8 @@ main()
                 n=0;
 
                 printf("\n write to the client:");
-                // while((msg[n++]=getchar())!='\n');
-                //      sendto(newsockid,msg,sizeof(msg),0,(struct sockaddr*)&client, sizeof(struct sockaddr_in));
+                while((msg[n++]=getchar())!='\n');
+                     sendto(newsockid,msg,sizeof(msg),0,(struct sockaddr*)&client, sizeof(struct sockaddr_in));
                 if(strncmp("bye",msg,3)==0)
                   {
                      printf("Exit session...\n");
